@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&family=Raleway&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Quicksand', sans-serif;
+            font-weight: 700;
+        }
+        .container {
+            height: 100vh;
+            background-color: dodgerblue;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .item {
+            background-color: #fff;
+            text-transform: uppercase;
+            border-radius: 5%;
+            padding: 15px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            position: relative;
+            z-index: 2;
+        }
+        .timer {
+            text-align: center;
+        }
+        .header-time {
+            display: inline-block;
+            color: #f55d00;
+            font-size: 40px;
+            font-weight: 400;
+            font-family: 'Raleway', sans-serif;
+            margin-bottom: 10px;
+        }
+        .number {
+            font-size: 85px;
+            line-height: 85px;
+            margin-right: 10px;
+            letter-spacing: 2px;
+        }
+        .message {
+            font-size: 30px;
+            color: darkred;
+        }
+        .logo {
+            position: absolute;
+            top: 50px;
+            right: 100px;
+            opacity: 0.5;
+            z-index: 1;
+            animation: mymove 5s infinite;
+        }
+        .logo img {
+            width: 300px;
+            height: 300px;
+        }
+
+        .print {
+            font-size: 30px;
+            color: orangered;
+
+        }
+
+        @keyframes mymove {
+            50% {transform: rotate(180deg);}
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item">
+            <div class="timer">
+                лекція розпочнеться через <br>
+                <span class="header-time">
+                    <span class="number" id="number">10</span>хв
+                </span> <br>
+                чілимо під музику
+            </div>
+            <div class="message">
+                !!!відмічаємось після початку запису!!!
+            </div>
+            <video width="200" height="200" autoplay muted loop>
+                <source src="bart.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+    </div>
+    
+    <div class="logo">
+        <img src="icon.png" alt="">
+    </div>
+
+    <div class="print">
+
+    </div>
+
+<script src="script.js"></script>
+</body>
+</html>
